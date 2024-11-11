@@ -15,7 +15,7 @@ public class Exercise10 {
             String color = getBall();
             System.out.println("La bola es de color: " + color);
 
-            if (color.equals("azul")) {
+            if ("azul".equals(color)) {
                 contAzul++;
             }
         } while (contAzul < 2);
@@ -30,18 +30,16 @@ public class Exercise10 {
     // 2 → azul
     // 3 → verde
     public static String getBall() {
-        int randomValue = randomWithRange(1, 3);
-        switch (randomValue) {
+        switch (randomWithRange(1, 3)) {
             case 1:
                 return "rojo";
             case 2:
                 return "azul";
             case 3:
                 return "verde";
-            default:
-                return "indefinido";
         }
 
+        return "";
     }
 
     public static int randomWithRange(int min, int max) {
